@@ -22,14 +22,14 @@ class MainActivity : AppCompatActivity() {
             val minNot : Int = 0
             var toplamNot : String = ""
 
-            if(mainBinding.birinciNot.text.toString().isEmpty() || birincinot.toInt()>maxNot || birincinot.toInt()<minNot){
+            if(mainBinding.birinciNot.text.toString().isEmpty() || birincinot.toFloat()>maxNot || birincinot.toFloat()<minNot){
                 mainBinding.birinciNot.error = "Hatalı İşlem Yaptınız"
             }
-            else if(mainBinding.ikinciNot.text.toString().isEmpty() || ikincinot.toInt()>maxNot || ikincinot.toInt()<minNot){
+            else if(mainBinding.ikinciNot.text.toString().isEmpty() || ikincinot.toFloat()>maxNot || ikincinot.toFloat()<minNot){
                 mainBinding.ikinciNot.error = "Hatalı İşlem Yaptınız"
             }
             else {
-                mainBinding.notOrt = ((birincinot.toInt()+ikincinot.toInt())/2).toString()
+                mainBinding.notOrt = ((birincinot.toFloat()+ikincinot.toFloat())/2).toString()
 
                 toplamNot = mainBinding.notOrt.toString()
                     if (toplamNot.toInt()<gecerNot){
